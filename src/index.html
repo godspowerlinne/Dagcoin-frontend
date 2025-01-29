@@ -5,10 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dagcoin - Home</title>
+    <link rel="stylesheet" href="./output.css">
 </head>
 
-<body>
-
+<body class="bg-[#3038E5] font-figtree relative h-fit overflow-x-hidden">
+    <div class="absolute scale-[3] md:scale-90 top-0 z-[-1]">
+        <img src="/assets/circles_dagcoin.png" alt="Circles" class="translate-y-[30%] md:translate-y-[-10%]">
+    </div>
+    <div class="flex flex-col gap-16 justify-center items-center px-6 py-16">
+        <div>
+            <img src="/assets/Logo_plain.svg" alt="Logo">
+        </div>
+        <div>
+            <img src="/assets/Wallet_dagcoin.svg" alt="Wallet" class="scale-110 md:scale-100">
+        </div>
+        <div class="text-center  w-[90%] md:w-[400px]">
+            <p class="text-[21px] md:text-[22px] mb-4 h-[50px] text-[#9DA3F9]">Welcome to your digital wallet</p>
+            <div class="flex flex-col gap-4">
+                <a href="/src/login.html"
+                    class="bg-[#fff] text-[#113DD1] md:bg-[#2027C6] md:text-white h-[60px] rounded-[20px] md:rounded-lg flex"><button
+                        class="w-[100%] md:text-[19px]">Login</button></a>
+                <a href="/src/signup.html"
+                    class="bg-transparent ring-1 ring-white md:ring-0 text-[#fff] md:bg-[#969AF1] h-[60px] rounded-[20px] md:rounded-lg flex"><button
+                        class="w-[100%] md:text-[19px]">Signup</button></a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
