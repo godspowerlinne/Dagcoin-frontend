@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign - Up</title>
+    <link rel="stylesheet" href="./output.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="font-figtree overflow-x-hidden">
+    <div class="absolute left-0 p-7 lg:py-[49px]">
+        <a href="/src/index.html">
+            <img src="/assets/Logo_dagcoin.svg" alt="Logo" class="hidden lg:block">
+            <div
+                class="text-3xl font-bold lg:hidden text-transparent bg-clip-text bg-gradient-to-r from-[#3038E5] from-30% to-10% to-[#969AF1] transition-all duration-300 hover:-translate-x-2">
+                &larr;</div>
+        </a>
+    </div>
+    <div class="py-8 lg:py-16 flex flex-col gap-16 justify-center items-center">
+        <h3 class="text-[18px] text-[#1E2240] uppercase">Sign Up</h3>
+        <div class="w-[90%] lg:w-[600px]">
+            <div class="m-auto max-w-[308px]">
+                <div><img src="/assets/Signup_dagcoin.svg" class="m-auto" alt="Signup"></div>
+                <h2 class="text-[18px] my-6 text-center text-[#1E2240]">Choose one of the options from below to add a
+                    new
+                    device</h2>
+            </div>
+            <div>
+                <div class="px-6">
+                    <div class="flex justify-between items-end border-t-[1.5px] py-8 border-[#EDEEF7]">
+                        <div class="relative h-[62px] w-[250px]">
+                            <label for="firstName" class="uppercase text-[10px] text-[#686b8399]">First name :</label>
+                            <input
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px] rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[16px] capitalize"
+                                type="text" name="Name" id="firstName" placeholder="Type here">
+                        </div>
+                        <div><i class="bx bx-user text-3xl text-[#9397B3]"></i></div>
+                    </div>
+                    <div class="flex justify-between items-end border-y-[1.5px] py-8 border-[#EDEEF7]">
+                        <div class="relative h-[62px] w-[250px]">
+                            <label for="firstName" class="uppercase text-[10px] text-[#686b8399]">Last name :</label>
+                            <input
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px] rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[16px] capitalize"
+                                type="text" name="Name" id="firstName" placeholder="Type here">
+                        </div>
+                        <div><i class="bx bx-user text-3xl text-[#9397B3]"></i></div>
+                    </div>
+                    <div class="flex justify-between items-end border-b-[1.5px] py-8 border-[#EDEEF7]">
+                        <div class="relative h-[62px] w-[250px]">
+                            <label for="firstName" class="uppercase text-[10px] text-[#686b8399]">Email :</label>
+                            <input
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px]  rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px] capitalize"
+                                type="email" name="Email" id="email" placeholder="Type here">
+                        </div>
+                        <div><i class="bx bx-envelope text-3xl text-[#9397B3]"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-[90%] md:w-[400px]">
+            <div class="flex flex-col gap-4 w-fit m-auto">
+                <div class="flex gap-2 items-center ">
+                    <input type="checkbox" id="checkbox" class="">
+                    <label for="checkbox" class="flex items-center gap-2">
+                        <span class="text-[#9397B3] text-[14px]">I agree with <a href="/src/terms_of_use.html"
+                                class="text-[#113DD1]">Terms &
+                                Conditions</a></span>
+                    </label>
+                </div>
+                <div>
+                    <span class="text-[#9397B3] text-[14px]">Already have an account? <a href="/src/login.html"
+                            class="text-[#113DD1]">Login</a></span>
+                </div>
+            </div>
+            <div class="flex justify-center mt-8 px-4 ">
+                <button type="submit" disabled
+                    class="h-[60px] bg-[#D9E0F64D] text-[#A5A7B34D] text-[19px] rounded-[20px] md:rounded-lg w-full cursor-not-allowed">Create
+                    Account</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
