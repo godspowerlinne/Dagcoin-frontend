@@ -801,6 +801,51 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes spin{
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin{
+  animation: spin 1s linear infinite;
+}
+
+.animate-\[oapc\]{
+  animation: oapc;
+}
+
+.animate-\[opacity\]{
+  animation: opacity;
+}
+
+.animate-\[opacity\=100\]{
+  animation: opacity=100;
+}
+
+.animate-\[opacity\=100\%\]{
+  animation: opacity=100%;
+}
+
+.animate-\[\]{
+  animation: ;
+}
+
+@keyframes ping{
+  75%, 100%{
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping{
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-\[2s\]{
+  animation: 2s;
+}
+
 .cursor-not-allowed{
   cursor: not-allowed;
 }
@@ -843,6 +888,10 @@ video {
 
 .gap-3{
   gap: 0.75rem;
+}
+
+.divide-opacity-35 > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 0.35;
 }
 
 .overflow-x-hidden{
@@ -966,6 +1015,10 @@ video {
 
 .from-30\%{
   --tw-gradient-from-position: 30%;
+}
+
+.from-75\%{
+  --tw-gradient-from-position: 75%;
 }
 
 .to-\[\#3039E5\]{
