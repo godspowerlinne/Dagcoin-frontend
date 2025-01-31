@@ -610,6 +610,16 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-16{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -738,6 +748,10 @@ video {
 
 .max-w-\[330px\]{
   max-width: 330px;
+}
+
+.max-w-\[564px\]{
+  max-width: 564px;
 }
 
 .translate-y-\[30\%\]{
@@ -973,6 +987,10 @@ video {
 
 .p-7{
   padding: 1.75rem;
+}
+
+.p-6{
+  padding: 1.5rem;
 }
 
 .px-4{
@@ -1349,6 +1367,14 @@ video {
 @media (min-width: 768px){
   .md\:mt-2{
     margin-top: 0.5rem;
+  }
+
+  .md\:block{
+    display: block;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:w-\[400px\]{
