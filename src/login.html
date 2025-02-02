@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/Logo_dagcoin.svg" type="image/x-icon">
     <title>Dagcoin - Login</title>
     <link rel="stylesheet" href="./output.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -24,28 +25,35 @@
             <div class="m-auto max-w-[308px]">
                 <div><img src="/assets/Login_dagcoin.svg" class="m-auto" alt="Login"></div>
             </div>
-            <form>
+            <form id="loginForm">
                 <div class="px-6">
+                    <!-- username field  -->
                     <div class="flex justify-between items-end border-t-[1.5px] py-8 border-[#EDEEF7]">
                         <div class="relative h-[62px] w-[250px]">
-                            <label for="userName" class="uppercase text-[10px] text-[#686b8399]">username :</label>
+                            <label for="username" class="uppercase text-[10px] text-[#686b8399]">Username :</label>
                             <input
-                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px] rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px]"
-                                type="text" name="Name" id="userName" placeholder="Type here">
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px] rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px] "
+                                type="text" name="username" id="username" placeholder="Type here" required minlength="3"
+                                maxlength="15">
                         </div>
-                        <div><i class="bx bx-user text-3xl text-[#9397B3]"></i></div>
+                        <div><i class="bx bxs-user-account text-3xl text-[#9397B3]"></i></div>
                     </div>
+                    <!-- password field  -->
                     <div class="flex justify-between items-end border-y-[1.5px] py-8 border-[#EDEEF7]">
                         <div class="relative h-[62px] w-[250px]">
-                            <label for="password" class="uppercase text-[10px] text-[#686b8399]">password :</label>
+                            <label for="password" class="uppercase text-[10px] text-[#686b8399]">Password
+                                :</label>
                             <input
-                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px]  rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px] capitalize"
-                                type="password" name="password" id="password" placeholder="Type here">
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px]  rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px]"
+                                type="password" name="password" id="password" placeholder="Type here" required>
                         </div>
-                        <div><i class='bx bxs-key bx-rotate-180 text-3xl text-[#9397B3]'></i></div>
+                        <div><i class="bx bxs-key bx-rotate-180 text-3xl text-[#9397B3]"></i></div>
                     </div>
                 </div>
                 <div class="px-6">
+                    <p id="userError"
+                        class="text-[14px] md:text-sm text-red-500 w-fit m-auto text-center  mt-12 opacity-80">
+                    </p>
                     <div class="flex flex-col gap-4 w-fit m-auto text-center  my-12 lg:my-16">
                         <div>
                             <span class="text-[#9397B3] text-[14px]">Forgot Password? <a
@@ -58,15 +66,21 @@
                                     class="text-[#113DD1]">Sign Up</a></span>
                         </div>
                     </div>
-                    <div class="flex justify-center mt-8 ">
-                        <button type="submit" disabled
-                            class="h-[60px] bg-[#D9E0F64D] text-[#A5A7B34D] text-[19px] rounded-[20px] md:rounded-lg w-full cursor-not-allowed">Login
-                            now</button>
+                    <div class="flex justify-center mt-8 px-4 ">
+                        <button id="loginButton" type="submit" onclick="toggleLoading()"
+                            class="relative inline-flex items-center justify-center h-[60px] text-[#A5A7B3]/50 text-[19px] focus:outline-none focus:ring-0  rounded-[20px] md:rounded-lg cursor-not-allowed transition-all duration-500 hover:translate-y-[-2px] bg-gradient-to-b from-[#D9E0F6]/40 to-[#D9E0F6]/50  w-[100%] text-center">
+                            <!-- Loading Spinner -->
+                            <span id="spinner"
+                                class="absolute top-[50%] translate-y-[-50%]  inset-0 justify-center items-center hidden">
+                                <i class='bx bx-loader-circle bx-spin  text-[35px]'></i>
+                            </span>
+                            <span id="buttonText" class="">Login now</span>
+                        </button>
                     </div>
-                </div>
             </form>
         </div>
     </div>
+    <script src="/src/utils/login.js"></script>
 </body>
 
 </html>

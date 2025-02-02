@@ -12,6 +12,7 @@
 
 <body class="font-figtree overflow-x-hidden">
     <div class="absolute left-0 p-7 lg:py-[49px]">
+        <!-- Logo  -->
         <a href="/src/index.html">
             <img src="/assets/Logo_dagcoin.svg" alt="Logo" class="hidden lg:block">
             <div
@@ -23,65 +24,149 @@
         <h3 class="text-[18px] text-[#1E2240] uppercase">Sign Up</h3>
         <div class="w-[90%] lg:w-[600px]">
             <div class="m-auto max-w-[308px]">
+                <!-- image  -->
                 <div><img src="/assets/Signup_dagcoin.svg" class="m-auto" alt="Signup"></div>
                 <h2 class="text-[18px] my-6 text-center text-[#1E2240]">Choose one of the options from below to add a
                     new
                     device</h2>
             </div>
-            <div>
+            <!-- Form Start  -->
+            <form id="signupForm">
                 <div class="px-6">
+                    <!-- Username Field  -->
                     <div class="flex justify-between items-end border-t-[1.5px] py-8 border-[#EDEEF7]">
                         <div class="relative h-[62px] w-[250px]">
+                            <p id="usernameError"
+                                class="text-[12px] md:text-sm text-red-500 items-center gap-1 absolute bottom-0 left-0 translate-y-6 z-[1] opacity-80 hidden">
+                                Invalid username <i class="bx bx-error translate-y-[2px]"></i></p>
+                            <label for="username" class="uppercase text-[10px] text-[#686b8399]">Username :</label>
+                            <input
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px] rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px] "
+                                type="text" name="username" id="username" placeholder="Type here" required minlength="3"
+                                maxlength="25">
+                        </div>
+                        <div><i class="bx bxs-user-account text-3xl text-[#9397B3]"></i></div>
+                    </div>
+                    <!-- First Name Field  -->
+                    <div class="flex justify-between items-end border-t-[1.5px] py-8 border-[#EDEEF7]">
+                        <div class="relative h-[62px] w-[250px]">
+                            <p id="firstNameError"
+                                class="text-[12px] md:text-sm text-red-500 items-center gap-1 absolute bottom-0 left-0 translate-y-6 z-[1] opacity-80 hidden">
+                                Invalid Name <i class="bx bx-error translate-y-[2px]"></i></p>
                             <label for="firstName" class="uppercase text-[10px] text-[#686b8399]">First name :</label>
                             <input
-                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px] rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[16px] capitalize"
-                                type="text" name="Name" id="firstName" placeholder="Type here">
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px] rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px]"
+                                type="text" name="firstName" id="firstName" placeholder="Type here" required
+                                minlength="3" maxlength="25">
                         </div>
-                        <div><i class="bx bx-user text-3xl text-[#9397B3]"></i></div>
+                        <div><i class="bx bxs-user text-3xl text-[#9397B3]"></i></div>
                     </div>
+                    <!-- Last Name Field  -->
                     <div class="flex justify-between items-end border-y-[1.5px] py-8 border-[#EDEEF7]">
                         <div class="relative h-[62px] w-[250px]">
-                            <label for="firstName" class="uppercase text-[10px] text-[#686b8399]">Last name :</label>
+                            <p id="lastNameError"
+                                class="text-[12px] md:text-sm text-red-500 items-center gap-1 absolute bottom-0 left-0 translate-y-6 z-[1] opacity-80 hidden">
+                                Invalid Last Name <i class="bx bx-error translate-y-[2px]"></i></p>
+                            <label for="lastName" class="uppercase text-[10px] text-[#686b8399]">Last name :</label>
                             <input
-                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px] rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[16px] capitalize"
-                                type="text" name="Name" id="firstName" placeholder="Type here">
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px] rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px]"
+                                type="text" name="lastName" id="lastName" placeholder="Type here" required minlength="3"
+                                maxlength="25">
                         </div>
                         <div><i class="bx bx-user text-3xl text-[#9397B3]"></i></div>
                     </div>
+                    <!-- Phone Number Field  -->
                     <div class="flex justify-between items-end border-b-[1.5px] py-8 border-[#EDEEF7]">
                         <div class="relative h-[62px] w-[250px]">
-                            <label for="firstName" class="uppercase text-[10px] text-[#686b8399]">Email :</label>
+                            <p id="phoneError"
+                                class="text-[12px] md:text-sm text-red-500 items-center gap-1 absolute bottom-0 left-0 translate-y-6 z-[1] opacity-80 hidden">
+                                Invalid phone number <i class="bx bx-error translate-y-[2px]"></i></p>
+                            <label for="phone" class="uppercase text-[10px] text-[#686b8399]">Phone :</label>
                             <input
-                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px]  rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px] capitalize"
-                                type="email" name="Email" id="email" placeholder="Type here">
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px]  rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px]"
+                                type="text" name="phone" id="phone" placeholder="Type here" required>
+                        </div>
+                        <div><i class="bx bxs-phone text-3xl text-[#9397B3]"></i></div>
+                    </div>
+                    <!-- Email Field  -->
+                    <div class="flex justify-between items-end border-b-[1.5px] py-8 border-[#EDEEF7]">
+                        <div class="relative h-[62px] w-[250px]">
+                            <p id="emailError"
+                                class="text-[12px] md:text-sm text-red-500 items-center gap-1 absolute bottom-0 left-0 translate-y-6 z-[1] opacity-80 hidden">
+                                Invalid email address <i class="bx bx-error translate-y-[2px]"></i></p>
+                            <label for="email" class="uppercase text-[10px] text-[#686b8399]">Email :</label>
+                            <input
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px]  rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px] "
+                                type="email" name="email" id="email" placeholder="Type here" required>
                         </div>
                         <div><i class="bx bx-envelope text-3xl text-[#9397B3]"></i></div>
                     </div>
+                    <!-- Password Field  -->
+                    <div class="flex justify-between items-end border-b-[1.5px] py-8 border-[#EDEEF7]">
+                        <div class="relative h-[62px] w-[250px]">
+                            <p id="passwordError"
+                                class="text-[8px] md:text-[10px] text-red-500 items-center gap-1 absolute bottom-0 left-0 translate-y-6 z-[1] opacity-80 hidden">
+                                Password does not meet requirements<i class="bx bx-error translate-y-[2px]"></i></p>
+                            <label for="password" class="uppercase text-[10px] text-[#686b8399]">Password :</label>
+                            <input
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px]  rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px]"
+                                type="password" name="password" id="password" placeholder="Type here" required>
+                            <span id="passwordStrength"
+                                class="text-[#c753f5] text-[8px] absolute top-2 left-[60%] z-[0] translate-x-5">Strength:
+                                <b id="passwordStrengthValue"></b></span>
+                        </div>
+                        <div><i class="bx bxs-key bx-rotate-180 text-3xl text-[#9397B3]"></i></div>
+                    </div>
+                    <!-- Confirm Password Field  -->
+                    <div class="flex justify-between items-end border-b-[1.5px] py-8 border-[#EDEEF7]">
+                        <div class="relative h-[62px] w-[250px]">
+                            <p id="confirmPasswordError"
+                                class="text-[12px] md:text-sm text-red-500 items-center gap-1 absolute bottom-0 left-0 translate-y-6 z-[1] opacity-80 hidden">
+                                Passwords do not match <i class="bx bx-error translate-y-[2px]"></i></p>
+                            <label for="confirmPassword" class="uppercase text-[10px] text-[#686b8399]">Confirm Password
+                                :</label>
+                            <input
+                                class="absolute bottom-0 left-0 z-[0] w-full py-2 px-4 placeholder:translate-x-[-14px]  rounded-md  outline-[#f4f4f7] placeholder:text-[#9397B399] placeholder:text-[14px]"
+                                type="password" name="confirmPassword" id="confirmPassword" placeholder="Type here"
+                                required>
+                        </div>
+                        <div><i class="bx bxs-key bx-rotate-180 text-3xl text-[#9397B3]"></i></div>
+                    </div>
+                    <p id="userError"
+                        class="text-[14px] md:text-sm text-red-500 w-fit m-auto text-center  mt-12 opacity-80">
+                    </p>
                 </div>
-            </div>
-        </div>
-        <div class="w-[90%] md:w-[400px]">
-            <div class="flex flex-col gap-4 w-fit m-auto">
-                <div class="flex gap-2 items-center ">
-                    <input type="checkbox" id="checkbox" class="">
-                    <label for="checkbox" class="flex items-center gap-2">
-                        <span class="text-[#9397B3] text-[14px]">I agree with <a href="/src/terms_of_use.html"
-                                class="text-[#113DD1]">Terms &
-                                Conditions</a></span>
-                    </label>
+                <div class="w-[90%] m-auto mt-12 md:w-[400px]">
+                    <div class="flex flex-col gap-4 w-fit m-auto">
+                        <div class="flex gap-2 items-center ">
+                            <input type="checkbox" id="checkbox" required>
+                            <label for="checkbox" class="flex items-center gap-2">
+                                <span class="text-[#9397B3] text-[14px]">I agree with <a href="/src/terms_of_use.html"
+                                        class="text-[#113DD1]">Terms &
+                                        Conditions</a></span>
+                            </label>
+                        </div>
+                        <div>
+                            <span class="text-[#9397B3] text-[14px]">Already have an account? <a href="/src/login.html"
+                                    class="text-[#113DD1]">Login</a></span>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-8 px-4 ">
+                        <button id="signupButton" type="submit" onclick="toggleLoading()"
+                            class="relative inline-flex items-center justify-center h-[60px] text-[#A5A7B3]/50 text-[19px] focus:outline-none focus:ring-0  rounded-[20px] md:rounded-lg cursor-not-allowed transition-all duration-500 hover:translate-y-[-2px] bg-gradient-to-b from-[#D9E0F6]/40 to-[#D9E0F6]/50  w-[100%] text-center">
+                            <!-- Loading Spinner -->
+                            <span id="spinner"
+                                class="absolute top-[50%] translate-y-[-50%]  inset-0 justify-center items-center hidden">
+                                <i class='bx bx-loader-circle bx-spin  text-[35px]'></i>
+                            </span>
+                            <span id="buttonText">Sign Up</span>
+                        </button>
+                    </div>
                 </div>
-                <div>
-                    <span class="text-[#9397B3] text-[14px]">Already have an account? <a href="/src/login.html"
-                            class="text-[#113DD1]">Login</a></span>
-                </div>
-            </div>
-            <div class="flex justify-center mt-8 px-4 ">
-                <button type="submit" disabled
-                    class="h-[60px] bg-[#D9E0F64D] text-[#A5A7B34D] text-[19px] rounded-[20px] md:rounded-lg w-full cursor-not-allowed">Create
-                    Account</button>
-            </div>
+            </form>
         </div>
     </div>
+    <script src="/src/utils/signup.js"></script>
 </body>
 
 </html>
